@@ -10,9 +10,10 @@ try {
         let docx = {
             method: "Get",
             url: "https://api.coincap.io/v2/assets",
-            headers: {
-                Authorization: `Bearer ${key}`,
-            }}
+                headers: {
+               Authorization: `Bearer ${key}`,
+            }
+        }
         let result = await axios(docx)
         let arr = result.data.data
         let sortArr = arr.sort((a, b) => a.changePercent24Hr - b.changePercent24Hr)

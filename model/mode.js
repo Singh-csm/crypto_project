@@ -1,7 +1,7 @@
 const { default: mongoose } = require("mongoose");
 
 
-const cryptoSchem = new mongoose.Schema({
+const cryptoSchema = new mongoose.Schema({
     symbol: {
         type: String,
         unique:true
@@ -14,4 +14,4 @@ const cryptoSchem = new mongoose.Schema({
     priceUsd: String
 }, { timestamps: true })
 
-module.exports = mongoose.model("Crypto", cryptoSchem)
+module.exports = mongoose.model("Crypto", cryptoSchema)
